@@ -1,0 +1,31 @@
+---
+Checks: "*,
+        -abseil-*,
+        -altera-*,
+        -fuchsia-*,
+        -google-*,
+        -llvm*,
+        -zircon-*,
+        -readability-uppercase-literal-suffix,
+        -readability-magic-numbers,
+        -readability-function-cognitive-complexity,
+        -cppcoreguidelines-pro-type-vararg,
+        -cppcoreguidelines-avoid-magic-numbers,
+        -cppcoreguidelines-pro-bounds-constant-array-index,
+        -readability-identifier-length,
+        -hicpp-uppercase-literal-suffix,
+        -hicpp-vararg,
+        -hicpp-signed-bitwise,
+        -readability-else-after-return,
+        -readability-static-accessed-through-instance,
+        -readability-avoid-const-params-in-decls,
+        -cppcoreguidelines-non-private-member-variables-in-classes,
+        -cppcoreguidelines-pro-type-union-access,
+        -misc-non-private-member-variables-in-classes,
+        -readability-redundant-access-specifiers,
+        -bugprone-unchecked-optional-access,
+        -cppcoreguidelines-pro-type-reinterpret-cast,
+"
+WarningsAsErrors: ''
+HeaderFilterRegex: ''
+FormatStyle: Microsoft
