@@ -22,7 +22,7 @@ message(STATUS "Building ${PROJECT_NAME} in [${CMAKE_BUILD_TYPE}] mode")
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
   message(STATUS "Tests active for ${PROJECT_NAME}")
-  enable_testing()
+  # enable_testing()
   add_subdirectory(tests)
 endif()
 
@@ -32,7 +32,8 @@ endif()
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
 target_link_libraries(${PROJECT_NAME} PRIVATE project_options project_warnings)
-target_link_system_libraries(${PROJECT_NAME} PRIVATE fmt::fmt spdlog::spdlog)
+target_link_system_libraries(${PROJECT_NAME} PRIVATE fmt::fmt spdlog::spdlog
+                             example_core)
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
   run_clang_format(${PACKAGE_SOURCE_DIR})

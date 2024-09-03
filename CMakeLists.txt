@@ -34,5 +34,9 @@ target_compile_features(project_options INTERFACE cxx_std_${CMAKE_CXX_STANDARD})
 add_library(project_workspace::project_options ALIAS project_options)
 add_library(project_workspace::project_warnings ALIAS project_warnings)
 
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+  enable_testing()
+endif()
+
 add_subdirectory(core)
 add_subdirectory(app)

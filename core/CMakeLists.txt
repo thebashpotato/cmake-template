@@ -26,7 +26,7 @@ message(STATUS "Building ${PROJECT_NAME} in [${CMAKE_BUILD_TYPE}] mode")
 #
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
   message(STATUS "Tests active for ${PROJECT_NAME}")
-  enable_testing()
+  # enable_testing()
   add_subdirectory(tests)
 endif()
 
