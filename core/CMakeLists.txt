@@ -1,5 +1,5 @@
 project(
-  example_core
+  example-core
   VERSION 0.1.0
   DESCRIPTION "Example library"
   LANGUAGES CXX)
@@ -26,7 +26,6 @@ message(STATUS "Building ${PROJECT_NAME} in [${CMAKE_BUILD_TYPE}] mode")
 #
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
   message(STATUS "Tests active for ${PROJECT_NAME}")
-  # enable_testing()
   add_subdirectory(tests)
 endif()
 
