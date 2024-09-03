@@ -1,4 +1,4 @@
-#include <core/core.hpp>
+#include <example_core/core.hpp>
 
 namespace example_core
 {

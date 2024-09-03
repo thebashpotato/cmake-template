@@ -8,7 +8,7 @@ set(TEST_SOURCE_FILES tests.cpp)
 #
 # Declare a custom name for the text executable
 #
-set(PROJECT_UNIT_TEST "${PROJECT_NAME}-tests")
+set(PROJECT_UNIT_TEST "${PROJECT_NAME}_tests")
 
 #
 # Add all test sources to the executable, and any other sources

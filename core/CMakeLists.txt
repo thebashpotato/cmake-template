@@ -1,5 +1,5 @@
 project(
-  example-core
+  example_core
   VERSION 0.1.0
   DESCRIPTION "Example library"
   LANGUAGES CXX)
@@ -28,6 +28,12 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
   message(STATUS "Tests active for ${PROJECT_NAME}")
   add_subdirectory(tests)
 endif()
+
+#
+# Generate configuration file
+#
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/configure_files/config.hpp.in
+               ${PACKAGE_INCLUDE_DIR}/${PROJECT_NAME}/config.hpp)
 
 #
 # Create the library

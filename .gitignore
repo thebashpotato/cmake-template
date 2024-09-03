@@ -5,11 +5,16 @@ out/coverage/*
 cmake-build-*/
 conan-cache/
 
+# Generated config files
+core/include/example_core/config.hpp
+
+
 # User spesific settings
 CMakeUserPresets.json
 
 # IDE files
 .vs/
+!.vscode/c_cpp_properties.json
 .idea/
 *.bak
 *.swp

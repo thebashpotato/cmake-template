@@ -8,7 +8,7 @@
             "type": "lldb",
             "request": "launch",
             "name": "core library unit tests",
-            "program": "${workspaceFolder}/build/core/tests/example-core-tests",
+            "program": "${workspaceFolder}/build/core/tests/example_core_tests",
             "args": [],
             "cwd": "${workspaceFolder}"
         },
@@ -16,7 +16,7 @@
             "type": "lldb",
             "request": "launch",
             "name": "application unit tests",
-            "program": "${workspaceFolder}/build/app/tests/example-app-tests",
+            "program": "${workspaceFolder}/build/app/tests/example_app_tests",
             "args": [],
             "cwd": "${workspaceFolder}"
         },
@@ -24,7 +24,7 @@
             "type": "lldb",
             "request": "launch",
             "name": "application main",
-            "program": "${workspaceFolder}/build/app/example-app",
+            "program": "${workspaceFolder}/build/app/example_app",
             "args": [],
             "cwd": "${workspaceFolder}"
         }

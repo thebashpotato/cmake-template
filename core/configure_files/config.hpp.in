@@ -1,0 +1,23 @@
+#pragma once
+
+#include <string_view>
+
+namespace example_core
+{
+
+inline constexpr std::string_view project_name = "@PROJECT_NAME@";
+inline constexpr std::string_view project_version = "@PROJECT_VERSION@";
+inline constexpr int project_version_major
+{
+    @PROJECT_VERSION_MAJOR@
+};
+inline constexpr int project_version_minor
+{
+    @PROJECT_VERSION_MINOR@
+};
+inline constexpr int project_version_patch
+{
+    @PROJECT_VERSION_PATCH@
+};
+
+} // namespace example_core
