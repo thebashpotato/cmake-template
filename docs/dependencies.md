@@ -10,9 +10,6 @@ Note about install commands:
 
 This is a really long list of dependencies, and it's easy to mess up. That's why:
 
-#### Docker
-A Docker image that's already set up for you. See the [Docker instructions](./docker.md).
-
 #### Setup-cpp
 
 [setup-cpp](https://github.com/aminya/setup-cpp) is a cross-platform tool to install all the compilers and dependencies on the system.
