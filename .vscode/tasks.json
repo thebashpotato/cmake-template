@@ -1,65 +1,108 @@
 {
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"type": "shell",
-			"label": "Custom CMake: Clean Rebuild",
-			"command": "cmake --build build --config Debug --target clean",
-			"problemMatcher": [],
-			"detail": "Generic clean rebuild",
-			"group": {
-				"kind": "build"
-			}
-		},
-		{
-			"type": "shell",
-			"label": "Custom CMake: Configure Debug [Clang]",
-			"command": "cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=clang++ -B build -G Ninja",
-			"problemMatcher": [],
-			"detail": "Configures project in debug mode with clang compiler (works on Unix and Windows)",
-			"group": {
-				"kind": "build"
-			}
-		},
-		{
-			"type": "shell",
-			"label": "Custom CMake: Configure Debug [MSVC]",
-			"command": "cmake -DCMAKE_BUILD_TYPE=Debug -B build -G 'Visual Studio 17 2022' -T host=x64 -A x64",
-			"problemMatcher": [],
-			"detail": "Configures project in debug mode with MSVC compiler (windows only)",
-			"group": {
-				"kind": "build"
-			}
-		},
-		{
-			"type": "shell",
-			"label": "Custom CMake: Configure Release [Clang]",
-			"command": "cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=clang++ -B build -G Ninja",
-			"problemMatcher": [],
-			"detail": "Configures project in release mode with clang compiler (works on Unix and Windows)",
-			"group": {
-				"kind": "build"
-			}
-		},
-		{
-			"type": "shell",
-			"label": "Custom CMake: Configure Release [MSVC]",
-			"command": "cmake -DCMAKE_BUILD_TYPE=Release -B build -G 'Visual Studio 17 2022' -T host=x64 -A x64",
-			"problemMatcher": [],
-			"detail": "Configures project in release mode with MSVC compiler (windows only)",
-			"group": {
-				"kind": "build"
-			}
-		},
-		{
-			"type": "shell",
-			"label": "Custom CMake: Build",
-			"command": "cmake --build build",
-			"problemMatcher": [],
-			"detail": "Builds the project",
-			"group": {
-				"kind": "build"
-			}
-		},
-	]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Custom CMake: Clean Rebuild",
+      "command": "cmake --build build --config Debug --target clean -j 34",
+      "problemMatcher": [],
+      "detail": "Generic clean rebuild",
+      "group": {
+        "kind": "build"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "Custom CMake: Configure Debug [Clang]",
+      "command": "cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=clang++ -B build -G Ninja",
+      "problemMatcher": [],
+      "detail": "Configures project in debug mode with clang compiler (Unix and Windows)",
+      "group": {
+        "kind": "build"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "Custom CMake: Configure Release [Clang]",
+      "command": "cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=clang++ -B build -G Ninja",
+      "problemMatcher": [],
+      "detail": "Configures project in release mode with clang compiler (works on Unix and Windows)",
+      "group": {
+        "kind": "build"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "Custom CMake: Configure Debug [GNU]",
+      "command": "cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=g++ -B build -G Ninja",
+      "problemMatcher": [],
+      "detail": "Configures project in debug mode with GNU compiler (Unix and Windows)",
+      "group": {
+        "kind": "build"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "Custom CMake: Configure Release[GNU]",
+      "command": "cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=g++ -B build -G Ninja",
+      "problemMatcher": [],
+      "detail": "Configures project in release mode with GNU compiler (Unix and Windows)",
+      "group": {
+        "kind": "build"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "Custom CMake: Configure Debug [MSVC]",
+      "command": "cmake -DCMAKE_BUILD_TYPE=Debug -B build -G 'Visual Studio 17 2022' -T host=x64 -A x64",
+      "problemMatcher": [],
+      "detail": "Configures project in debug mode with MSVC compiler (windows only)",
+      "group": {
+        "kind": "build"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "Custom CMake: Configure Release [MSVC]",
+      "command": "cmake -DCMAKE_BUILD_TYPE=Release -B build -G 'Visual Studio 17 2022' -T host=x64 -A x64",
+      "problemMatcher": [],
+      "detail": "Configures project in release mode with MSVC compiler (windows only)",
+      "group": {
+        "kind": "build"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "Custom CMake: Build",
+      "command": "cmake --build build -j 34",
+      "problemMatcher": [],
+      "detail": "Builds the project",
+      "group": {
+        "kind": "build"
+      }
+    },
+    {
+      "label": "Custom CMake: Clean",
+      "type": "shell",
+      "command": "rm -rf build",
+      "windows": {
+        "command": "Remove-Item -Recurse -Force build"
+      },
+      "detail": "Cleans entire project",
+      "group": {
+        "kind": "build"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Custom CMake: Unit Tests",
+      "type": "shell",
+      "command": "ctest --test-dir build",
+      "detail": "Runs Unit tests",
+      "group": {
+        "kind": "build"
+      },
+      "problemMatcher": []
+    }
+  ]
 }
