@@ -1,5 +1,5 @@
-#include <example_core/core.hpp>
 #include <example_core/config.hpp>
+#include <example_core/core.hpp>
 #include <gtest/gtest.h>
 
 using namespace example_core;
@@ -12,7 +12,6 @@ TEST(FactorialTestSuite, Test1)
     ASSERT_EQ(factorial(3), 6);
     ASSERT_EQ(factorial(10), 3628800);
 }
-
 
 TEST(ConfigFileTestSuite, Test1)
 {

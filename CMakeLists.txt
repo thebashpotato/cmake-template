@@ -29,7 +29,6 @@ include(Dependencies.cmake)
 project_setup_dependencies()
 project_local_options()
 
-
 target_compile_features(project_options INTERFACE cxx_std_${CMAKE_CXX_STANDARD})
 add_library(project_workspace::project_options ALIAS project_options)
 add_library(project_workspace::project_warnings ALIAS project_warnings)

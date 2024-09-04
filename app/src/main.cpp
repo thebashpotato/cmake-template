@@ -1,6 +1,6 @@
 #include <cstdlib>
-#include <example_core/core.hpp>
 #include <example_core/config.hpp>
+#include <example_core/core.hpp>
 #include <spdlog/spdlog.h>
 
 using namespace example_core;
