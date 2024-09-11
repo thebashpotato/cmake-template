@@ -4,6 +4,7 @@ out/
 out/coverage/*
 cmake-build-*/
 conan-cache/
+.cache/
 
 # Generated config files
 core/include/example_core/config.hpp
