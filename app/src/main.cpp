@@ -1,9 +1,9 @@
 #include <cstdlib>
-#include <example_core/config.hpp>
-#include <example_core/core.hpp>
+#include <project_core/config.hpp>
+#include <project_core/core.hpp>
 #include <spdlog/spdlog.h>
 
-using namespace example_core;
+using namespace project_core;
 
 auto main() -> int
 {

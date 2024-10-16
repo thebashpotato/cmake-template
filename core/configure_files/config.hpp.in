@@ -2,7 +2,7 @@
 
 #include <string_view>
 
-namespace example_core
+namespace project_core
 {
 
 inline constexpr std::string_view project_name = "@PROJECT_NAME@";
@@ -20,4 +20,4 @@ inline constexpr int project_version_patch
     @PROJECT_VERSION_PATCH@
 };
 
-} // namespace example_core
+} // namespace project_core

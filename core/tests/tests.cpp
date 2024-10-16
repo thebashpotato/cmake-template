@@ -1,8 +1,8 @@
-#include <example_core/config.hpp>
-#include <example_core/core.hpp>
 #include <gtest/gtest.h>
+#include <project_core/config.hpp>
+#include <project_core/core.hpp>
 
-using namespace example_core;
+using namespace project_core;
 
 TEST(FactorialTestSuite, Test1)
 {
@@ -15,7 +15,7 @@ TEST(FactorialTestSuite, Test1)
 
 TEST(ConfigFileTestSuite, Test1)
 {
-    ASSERT_EQ(project_name, "example_core");
+    ASSERT_EQ(project_name, "project_core");
     ASSERT_EQ(project_version_major, 0);
     ASSERT_EQ(project_version_minor, 1);
     ASSERT_EQ(project_version_patch, 0);

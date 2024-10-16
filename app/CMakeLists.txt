@@ -1,5 +1,5 @@
 project(
-  example_app
+  project_app
   VERSION 0.1.0
   DESCRIPTION "Example executable application"
   LANGUAGES CXX)
@@ -32,7 +32,7 @@ add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
 target_link_libraries(${PROJECT_NAME} PRIVATE project_options project_warnings)
 target_link_system_libraries(${PROJECT_NAME} PRIVATE fmt::fmt spdlog::spdlog
-                             example_core)
+                             project_core)
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
   run_clang_format(${PACKAGE_SOURCE_DIR})

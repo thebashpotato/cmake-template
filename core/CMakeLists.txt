@@ -1,5 +1,5 @@
 project(
-  example_core
+  project_core
   VERSION 0.1.0
   DESCRIPTION "Example library"
   LANGUAGES CXX)

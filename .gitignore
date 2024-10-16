@@ -7,7 +7,7 @@ conan-cache/
 .cache/
 
 # Generated config files
-core/include/example_core/config.hpp
+core/include/project_core/config.hpp
 
 
 # User spesific settings

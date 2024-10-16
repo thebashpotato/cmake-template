@@ -1,6 +1,6 @@
-#include <example_core/core.hpp>
+#include <project_core/core.hpp>
 
-namespace example_core
+namespace project_core
 {
 
 auto factorial(int n) noexcept -> int
@@ -16,4 +16,4 @@ auto factorial(int n) noexcept -> int
     return result;
 }
 
-} // namespace example_core
+} // namespace project_core
