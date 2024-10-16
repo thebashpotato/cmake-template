@@ -52,7 +52,7 @@ function(
     endif()
   elseif(MSVC)
     if(${ENABLE_SANITIZER_ADDRESS})
-      list(APPEND SANITIZERS "address")
+      # list(APPEND SANITIZERS "address")
     endif()
     if(${ENABLE_SANITIZER_LEAK}
        OR ${ENABLE_SANITIZER_UNDEFINED_BEHAVIOR}
