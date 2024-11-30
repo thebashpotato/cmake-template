@@ -7,7 +7,7 @@ conan-cache/
 .cache/
 
 # Generated config files
-core/include/project_core/config.hpp
+core/include/myproject_core/config.hpp
 
 
 # User spesific settings
@@ -35,3 +35,4 @@ $RECYCLE.BIN/
 .TemporaryItems
 ehthumbs.db
 Thumbs.db
+compile_commands.json

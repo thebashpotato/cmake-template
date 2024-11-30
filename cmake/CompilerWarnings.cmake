@@ -2,7 +2,7 @@
 #
 # https://github.com/lefticus/cppbestpractices/blob/master/02-Use_the_Tools_Available.md
 
-function(set_project_warnings project_name WARNINGS_AS_ERRORS MSVC_WARNINGS
+function(set_myproject_warnings myproject_name WARNINGS_AS_ERRORS MSVC_WARNINGS
          CLANG_WARNINGS GCC_WARNINGS)
   if("${MSVC_WARNINGS}" STREQUAL "")
     set(MSVC_WARNINGS
@@ -107,7 +107,7 @@ function(set_project_warnings project_name WARNINGS_AS_ERRORS MSVC_WARNINGS
   set(PROJECT_WARNINGS_C "${PROJECT_WARNINGS_CXX}")
 
   target_compile_options(
-    ${project_name}
+    ${myproject_name}
     INTERFACE # C++ warnings
               $<$<COMPILE_LANGUAGE:CXX>:${PROJECT_WARNINGS_CXX}>
               # C warnings

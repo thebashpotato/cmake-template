@@ -1,6 +1,6 @@
 function(
-  project_enable_sanitizers
-  project_name
+  myproject_enable_sanitizers
+  myproject_name
   ENABLE_SANITIZER_ADDRESS
   ENABLE_SANITIZER_LEAK
   ENABLE_SANITIZER_UNDEFINED_BEHAVIOR
@@ -67,9 +67,9 @@ function(
   if(LIST_OF_SANITIZERS)
     if(NOT "${LIST_OF_SANITIZERS}" STREQUAL "")
       if(NOT MSVC)
-        target_compile_options(${project_name}
+        target_compile_options(${myproject_name}
                                INTERFACE -fsanitize=${LIST_OF_SANITIZERS})
-        target_link_options(${project_name} INTERFACE
+        target_link_options(${myproject_name} INTERFACE
                             -fsanitize=${LIST_OF_SANITIZERS})
       else()
         string(FIND "$ENV{PATH}" "$ENV{VSINSTALLDIR}" index_of_vs_install_dir)
@@ -80,12 +80,12 @@ function(
           )
         endif()
         target_compile_options(
-          ${project_name} INTERFACE /fsanitize=${LIST_OF_SANITIZERS} /Zi
+          ${myproject_name} INTERFACE /fsanitize=${LIST_OF_SANITIZERS} /Zi
                                     /INCREMENTAL:NO)
         target_compile_definitions(
-          ${project_name} INTERFACE _DISABLE_VECTOR_ANNOTATION
+          ${myproject_name} INTERFACE _DISABLE_VECTOR_ANNOTATION
                                     _DISABLE_STRING_ANNOTATION)
-        target_link_options(${project_name} INTERFACE /INCREMENTAL:NO)
+        target_link_options(${myproject_name} INTERFACE /INCREMENTAL:NO)
       endif()
     endif()
   endif()

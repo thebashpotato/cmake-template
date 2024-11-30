@@ -1,6 +1,6 @@
 include(CheckCXXCompilerFlag)
 
-macro(project_enable_hardening target global ubsan_minimal_runtime)
+macro(myproject_enable_hardening target global ubsan_minimal_runtime)
 
   message(STATUS "** Enabling Hardening (Target ${target}) **")
 

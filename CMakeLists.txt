@@ -15,7 +15,7 @@ endif()
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 project(
-  project_workspace
+  myproject_workspace
   VERSION 0.1.0
   DESCRIPTION "Templated cmake project for cross-platform C++ development"
   LANGUAGES CXX)
@@ -24,16 +24,16 @@ include(cmake/PreventInSourceBuilds.cmake)
 include(cmake/ClangFormat.cmake)
 include(ProjectOptions.cmake)
 
-project_setup_options()
-project_global_options()
+myproject_setup_options()
+myproject_global_options()
 
 include(Dependencies.cmake)
-project_setup_dependencies()
-project_local_options()
+myproject_setup_dependencies()
+myproject_local_options()
 
-target_compile_features(project_options INTERFACE cxx_std_${CMAKE_CXX_STANDARD})
-add_library(project_workspace::project_options ALIAS project_options)
-add_library(project_workspace::project_warnings ALIAS project_warnings)
+target_compile_features(myproject_options INTERFACE cxx_std_${CMAKE_CXX_STANDARD})
+add_library(myproject_workspace::myproject_options ALIAS myproject_options)
+add_library(myproject_workspace::myproject_warnings ALIAS myproject_warnings)
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
   enable_testing()

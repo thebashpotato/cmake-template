@@ -1,8 +1,7 @@
 #pragma once
 
-namespace project_core
-{
+namespace myproject_core {
 
 [[nodiscard]] auto factorial(int n) noexcept -> int;
 
-} // namespace project_core
+}  // namespace myproject_core

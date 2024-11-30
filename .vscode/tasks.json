@@ -14,7 +14,7 @@
         {
             "type": "shell",
             "label": "Custom CMake: Configure Debug [Clang]",
-            "command": "cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=clang++ -B build -G Ninja",
+            "command": "cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -B build -G Ninja",
             "problemMatcher": [],
             "detail": "Configures project in debug mode with clang compiler (Unix and Windows)",
             "group": {
@@ -24,7 +24,7 @@
         {
             "type": "shell",
             "label": "Custom CMake: Configure Release [Clang]",
-            "command": "cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=clang++ -B build -G Ninja",
+            "command": "cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -B build -G Ninja",
             "problemMatcher": [],
             "detail": "Configures project in release mode with clang compiler (works on Unix and Windows)",
             "group": {
@@ -34,7 +34,7 @@
         {
             "type": "shell",
             "label": "Custom CMake: Configure Debug [GNU]",
-            "command": "cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=g++ -B build -G Ninja",
+            "command": "cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ -B build -G Ninja",
             "problemMatcher": [],
             "detail": "Configures project in debug mode with GNU compiler (Unix and Windows)",
             "group": {
@@ -44,7 +44,7 @@
         {
             "type": "shell",
             "label": "Custom CMake: Configure Release[GNU]",
-            "command": "cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=g++ -B build -G Ninja",
+            "command": "cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ -B build -G Ninja",
             "problemMatcher": [],
             "detail": "Configures project in release mode with GNU compiler (Unix and Windows)",
             "group": {

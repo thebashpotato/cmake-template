@@ -20,7 +20,7 @@ add_executable(${PROJECT_UNIT_TEST} ${TEST_SOURCE_FILES})
 #
 target_include_directories(${PROJECT_UNIT_TEST} PUBLIC ${PACKAGE_INCLUDE_DIR})
 target_link_libraries(${PROJECT_UNIT_TEST}
-                      PRIVATE project_options project_warnings gtest gtest_main ${PROJECT_NAME})
+                      PRIVATE myproject_options myproject_warnings gtest gtest_main ${PROJECT_NAME})
 
 #
 # Instruct gtest to discover all tests

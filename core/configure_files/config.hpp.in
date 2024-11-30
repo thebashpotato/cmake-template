@@ -2,22 +2,12 @@
 
 #include <string_view>
 
-namespace project_core
-{
+namespace myproject_core {
 
-inline constexpr std::string_view project_name = "@PROJECT_NAME@";
-inline constexpr std::string_view project_version = "@PROJECT_VERSION@";
-inline constexpr int project_version_major
-{
-    @PROJECT_VERSION_MAJOR@
-};
-inline constexpr int project_version_minor
-{
-    @PROJECT_VERSION_MINOR@
-};
-inline constexpr int project_version_patch
-{
-    @PROJECT_VERSION_PATCH@
-};
+inline constexpr std::string_view myproject_name = "@PROJECT_NAME@";
+inline constexpr std::string_view myproject_version = "@PROJECT_VERSION@";
+inline constexpr int myproject_version_major { @PROJECT_VERSION_MAJOR@ };
+inline constexpr int myproject_version_minor { @PROJECT_VERSION_MINOR@ };
+inline constexpr int myproject_version_patch { @PROJECT_VERSION_PATCH@ };
 
-} // namespace project_core
+}  // namespace myproject_core

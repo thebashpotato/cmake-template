@@ -1,4 +1,4 @@
-macro(project_configure_linker project_name)
+macro(myproject_configure_linker myproject_name)
   include(CheckCXXCompilerFlag)
 
   set(USER_LINKER_OPTION
@@ -17,7 +17,7 @@ macro(project_configure_linker project_name)
     )
   endif()
 
-  if(NOT project_ENABLE_USER_LINKER)
+  if(NOT myproject_ENABLE_USER_LINKER)
     return()
   endif()
 
@@ -25,6 +25,6 @@ macro(project_configure_linker project_name)
 
   check_cxx_compiler_flag(${LINKER_FLAG} CXX_SUPPORTS_USER_LINKER)
   if(CXX_SUPPORTS_USER_LINKER)
-    target_compile_options(${project_name} INTERFACE ${LINKER_FLAG})
+    target_compile_options(${myproject_name} INTERFACE ${LINKER_FLAG})
   endif()
 endmacro()

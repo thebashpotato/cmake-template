@@ -1,14 +1,14 @@
-#include <cstdlib>
-#include <project_core/config.hpp>
-#include <project_core/core.hpp>
 #include <spdlog/spdlog.h>
 
-using namespace project_core;
+#include <cstdlib>
+#include <myproject_core/config.hpp>
+#include <myproject_core/core.hpp>
 
-auto main() -> int
-{
-    spdlog::info("{} {}", project_name, project_version);
-    spdlog::info("Factorial 10 = {}", factorial(10));
+using namespace myproject_core;
 
-    return EXIT_SUCCESS;
+auto main() -> int {
+  spdlog::info("{} {}", myproject_name, myproject_version);
+  spdlog::info("Factorial 10 = {}", factorial(10));
+
+  return EXIT_SUCCESS;
 }

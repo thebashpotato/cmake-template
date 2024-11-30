@@ -5,6 +5,9 @@
         "twxs.cmake",
         "xaver.clang-format",
         "ms-vscode.cpptools",
-        "vadimcn.vscode-lldb"
+        "vadimcn.vscode-lldb",
+        "cs128.cs128-clang-tidy",
+        "llvm-vs-code-extensions.vscode-clangd",
+        "ms-vscode.cmake-tools"
     ]
 }

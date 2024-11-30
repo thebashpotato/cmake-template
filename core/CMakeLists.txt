@@ -1,5 +1,5 @@
 project(
-  project_core
+  myproject_core
   VERSION 0.1.0
   DESCRIPTION "Example library"
   LANGUAGES CXX)
@@ -41,7 +41,7 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/configure_files/config.hpp.in
 add_library(${PROJECT_NAME} STATIC ${SOURCE_FILES})
 
 # Link required dependencies
-target_link_libraries(${PROJECT_NAME} PRIVATE project_options project_warnings
+target_link_libraries(${PROJECT_NAME} PRIVATE myproject_options myproject_warnings
                                               fmt::fmt spdlog::spdlog)
 
 target_include_directories(

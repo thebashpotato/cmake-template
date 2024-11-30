@@ -2,7 +2,7 @@ include(cmake/CPM.cmake)
 
 # Done as a function so that updates to variables like CMAKE_CXX_FLAGS don't
 # propagate out to other targets
-function(project_setup_dependencies)
+function(myproject_setup_dependencies)
 
   if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     if(NOT TARGET gtest)
