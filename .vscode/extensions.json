@@ -4,7 +4,6 @@
         "cheshirekow.cmake-format",
         "twxs.cmake",
         "xaver.clang-format",
-        "ms-vscode.cpptools",
         "vadimcn.vscode-lldb",
         "cs128.cs128-clang-tidy",
         "llvm-vs-code-extensions.vscode-clangd",
