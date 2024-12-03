@@ -4,7 +4,7 @@
         {
             "type": "shell",
             "label": "Custom CMake: Clean Rebuild",
-            "command": "cmake --build build --config Debug --target clean -j 8",
+            "command": "cmake --build build --config Debug --target clean --parallel",
             "problemMatcher": [],
             "detail": "Generic clean rebuild",
             "group": {
@@ -74,7 +74,7 @@
         {
             "type": "shell",
             "label": "Custom CMake: Build",
-            "command": "cmake --build build -j 8",
+            "command": "cmake --build build --parallel",
             "problemMatcher": [],
             "detail": "Builds the project",
             "group": {
